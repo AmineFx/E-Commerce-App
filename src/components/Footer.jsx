@@ -8,9 +8,12 @@ import {
   Phone,
   MailOutlined
 } from "@mui/icons-material";
+import { mobile } from "../responsive";
+
 
 const Container = styled.div`
   display: flex;
+  ${mobile({ flexDirection: "column" })}
 `;
 
 const Left = styled.div`
@@ -18,17 +21,20 @@ const Left = styled.div`
   display: flex;
   flex-direction: column;
   padding: 20px;
+  ${mobile({ padding: "10px" })}
 `;
 
 const Center = styled.div`
   flex: 1;
   padding : 20px;
+  ${mobile({ display: "none" })}
 
 `;
 
 const Right = styled.div`
   flex: 1;
   padding : 20px;
+  ${mobile({ backgroundColor: "#fff8f8" })}
 `;
 
 const Logo = styled.h1``;
@@ -82,6 +88,7 @@ const ContactItem = styled.div`
     `;
 const Payment = styled.img`
     width : 50%;
+    ${mobile({ width: "80%" })}
 `;
 
 const Footer = () => {

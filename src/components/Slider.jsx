@@ -4,6 +4,7 @@ import ArrowRightOutlinedIcon from "@mui/icons-material/ArrowRightOutlined";
 import imgspp from "../assets/imgspp.png";
 import { useState } from "react";
 import {sliderItems} from "../data"
+import { mobile } from "../responsive";
 
 
 
@@ -13,6 +14,7 @@ import {sliderItems} from "../data"
         display : flex ;
         position : relative;
         overflow : hidden ;
+        ${mobile({ display: "none" })}
         `;
         
         const Wrapper = styled.div`
